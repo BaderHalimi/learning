@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Models\Classroom;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,9 @@ Route::get('dashboard', function () {
 Route::get('/name/{name}', function ($name) {
     return $name;
 });
+
+Route::get('/register', [AuthController::class,'create'])->name('register');
+Route::post('/register', [AuthController::class,'store'])->name('register.store');
+Route::get('/login', [AuthController::class,'login'])->name('login');
+Route::post('/login', [AuthController::class,'show'])->name('login.logic');
+// App\Http\Controllers\AuthController

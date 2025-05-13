@@ -58,7 +58,7 @@
             <!-- Main Content -->
             <main class="col-md-10 ms-sm-auto px-md-4 py-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2>Welcome back, Jaber 👋</h2>
+                    <h2>Welcome back, {{ Auth::user()->name }} 👋</h2>
                     <div class="d-flex align-items-center gap-3">
                         <span class="badge bg-info text-dark">3 New Notifications</span>
                         <img src="https://via.placeholder.com/40" class="rounded-circle" alt="User" />
